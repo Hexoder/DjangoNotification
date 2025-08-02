@@ -10,5 +10,5 @@ router.register(r'broadcast', BroadcastNotificationViewSet, basename='broadcast-
 
 urlpatterns = [
     path("notifications/ws_auth/", AsgiValidateTokenView.as_view()),  # WS Authentication
-    path('notifications', include(router.urls)),
+    path('notifications/', include(router.urls)),
 ]
